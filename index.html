@@ -3,222 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ariel Faundez">
-    <title>Video Stream</title>
+    <meta name="author" content="Yhojans Silva">
+    <title>VideoStream</title>
     <link rel="stylesheet" href="static/css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    
-    <header class="navbar">
-        <div class="imagen-youtube">
-            <img src="static/images/Youtube_logo.png" alt="VideoStream Logo">
-            <h1>Video<span class="rojo">Stream</span></h1>
-            <nav class="explorar">
-                <a href="#">Inicio</a>
-                <a href="#">Explorar</a>
+<header class="header">
+        <div class="container nav-container">
+            <div class="logo_youtube">
+                <img src="static/images/image copy 9.png" alt="logo">
+            </div>
+            <a href="#" class="logo">
+                Video<span>Stream</span>
+            </a>
+            <!-- COMENTARIO: Se añade la clase 'contenedor-navegacion' al nav para manejar Flexbox envolvente -->
+            <nav class="contenedor-navegacion">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#" class="nav-link active">Inicio</a></li>
+                    <li><a href="#" class="nav-link">Explorar</a></li>
+                    <li><a href="#" class="nav-link">Mi lista</a></li>
+                </ul>
+                <div class="buscador">
+                    <input type="text" id="buscarVideoa" placeholder="Buscar">
+                    <button id="btnBuscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="imagenes_perfil">
+                        <img src="static/images/image copy 10.png" alt="notificaciones">
+                        <img src="static/images/image copy 11.png" alt="foto de perfil">
+                    </div>
+                </div>
             </nav>
         </div>
-
     </header>
+<main>
 
-    
-    <main class="main-layout">
-        
-        
-        <section class="video-section">
-            <div class="video-container">
-                <video controls poster="static/images/thumbnail-main.jpg">
-                    <source src="static/videos/lagos-y-montanas.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
+    <section class="video">
+
+        <div class="reproductor">
+        </div>
+
+        <div class="datos">
+            <h2>Lagos y montañas</h2>
+            <p class="vistas">95 mil visualizaciones • 10 abr 2024</p>
+
+            <div class="acciones">
+                <div class="megusta">
+                    <button class="boton" id="like">
+                    <span id="likes">4,8 K</span>
+                    </button>
+
+                    <button class="boton" id="dislike">
+                    <span>120</span>
+                    </button>
+                </div>
+
+                <button class="boton">•••</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="canal">
+
+            <div class="encabezado">
+                <img src="static/images/channel-avatar.png" alt="VideoStream" class="avatar">
+
+                <div>
+                    <h3>VideoStream</h3>
+                    <p class="suscriptores">1,2 M de suscriptores</p>
+                </div>
+
+                <button class="suscribir" id="suscribir">
+                    Suscribirse
+                </button>
             </div>
 
-            <div class="video-details">
-                <h2>Lagos y montañas</h2>
-                <p class="views-date">95 mil visualizaciones • 10 abr 2024</p>
+            <div class="descripcion">
+                <p>
+                    Un recorrido por los lagos más hermosos de la Patagonia y sus alrededores.
+                    Descubre paisajes increíbles, rutas de trekking y consejos imperdibles.
+                </p>
 
-                <div class="video-actions">
-                    <div class="like-dislike-group">
-                        <button class="btn-action" id="btn-like">
-                            <span id="like-count">4,8 K</span>
-                        </button>
-                        <button class="btn-action" id="btn-dislike">
-                            <span>120</span>
-                        </button>
+                <a href="#">Mostrar más</a>
+            </div>
+
+        </div>
+
+        <section class="mas">
+            <h3>Más videos</h3>
+
+            <div class="videos">
+
+                <div class="tarjeta">
+                    <div class="miniatura">
+                        <img src="static/images/image copy 2.png" alt="Rutas de trekking">
+                        <span>6:15</span>
                     </div>
 
-                    <button class="btn-action icon-only"><i data-lucide="more-horizontal"></i></button>
+                    <h4>Rutas de trekking</h4>
+                    <p>80 mil visualizaciones</p>
                 </div>
-            </div>
 
-            <hr class="divider">
-
-            
-            <div class="channel-info">
-                <div class="channel-header">
-                    <img src="static/images/channel-avatar.png" alt="VideoStream Avatar" class="avatar-lg">
-                    <div class="channel-text">
-                        <h3>VideoStream</h3>
-                        <p class="subscribers">1,2 M de suscriptores</p>
+                <div class="tarjeta">
+                    <div class="miniatura">
+                        <img src="static/images/image.png" alt="Lagos y montañas">
+                        <span>4:32</span>
                     </div>
-                    <button class="btn-subscribe" id="btn-subscribe">Suscribirse</button>
+
+                    <h4>Lagos y montañas</h4>
+                    <p>95 mil visualizaciones</p>
                 </div>
-                <div class="description">
-                    <p>Un recorrido por los lagos más hermosos de la Patagonia y sus alrededores. Descubre paisajes increíbles, rutas de trekking y consejos imperdibles.</p>
-                    <a href="#" class="show-more">Mostrar más</a>
+
+                <div class="tarjeta">
+                    <div class="miniatura">
+                        <img src="static/images/image copy.png" alt="Fauna patagónica">
+                        <span>3:50</span>
+                    </div>
+
+                    <h4>Fauna patagónica</h4>
+                    <p>60 mil visualizaciones</p>
                 </div>
+
+                <div class="tarjeta">
+                    <div class="miniatura">
+                        <img src="static/images/image copy 3.png" alt="Consejos para viajar">
+                        <span>4:18</span>
+                    </div>
+
+                    <h4>Consejos para viajar</h4>
+                    <p>110 mil visualizaciones</p>
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+
+    <section class="cola">
+
+        <div class="bloque">
+
+            <div class="titulo">
+                <h3>Siguiente en la cola</h3>
+                <button>Limpiar cola</button>
             </div>
 
-            
-            <section class="more-videos">
-                <h3>Más videos</h3>
-                <div class="grid-more-videos">
-                    <div class="video-card hover-preview">
-                        <div class="thumb-wrapper">
-                            <img src="static/images/image copy 2.png" alt="Rutas de trekking">
-                            <span class="duration">6:15</span>
-                        </div>
+            <div class="lista">
+
+                <div class="tarjeta2">
+                    <div class="mini">
+                        <img src="static/images/image copy 7.png" alt="Explorando la Patagonia">
+                        <span>6:15</span>
+                    </div>
+
+                    <div class="info">
+                        <h4>Explorando la Patagonia</h4>
+                        <p>VideoStream</p>
+                        <p>120 mil visualizaciones</p>
+                    </div>
+
+                    <button class="eliminar">×</button>
+                </div>
+
+                <div class="tarjeta2">
+                    <div class="mini">
+                        <img src="static/images/image copy 6.png" alt="Comida callejera">
+                        <span>4:10</span>
+                    </div>
+
+                    <div class="info">
+                        <h4>Comida callejera</h4>
+                        <p>VideoStream</p>
+                        <p>98 mil visualizaciones</p>
+                    </div>
+
+                    <button class="eliminar">×</button>
+                </div>
+
+                <div class="tarjeta2">
+                    <div class="mini">
+                        <img src="static/images/image copy 5.png" alt="Ciudades del mundo">
+                        <span>8:12</span>
+                    </div>
+
+                    <div class="info">
+                        <h4>Ciudades del mundo</h4>
+                        <p>VideoStream</p>
+                        <p>210 mil visualizaciones</p>
+                    </div>
+
+                    <button class="eliminar">×</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bloque">
+
+            <div class="titulo">
+                <h3>Recomendados</h3>
+            </div>
+
+            <div class="lista">
+
+                <div class="tarjeta2">
+                    <div class="mini">
+                        <img src="static/images/image copy 2.png" alt="Rutas de trekking">
+                        <span>5:20</span>
+                    </div>
+
+                    <div class="info">
                         <h4>Rutas de trekking</h4>
+                        <p>VideoStream</p>
                         <p>80 mil visualizaciones</p>
                     </div>
 
-                    <div class="video-card hover-preview">
-                        <div class="thumb-wrapper">
-                            <img src="static/images/image.png" alt="Lagos y montañas">
-                            <span class="duration">4:32</span>
-                        </div>
-                        <h4>Lagos y montañas</h4>
-                        <p>95 mil visualizaciones</p>
+                    <button class="agregar">+</button>
+                </div>
+
+                <div class="tarjeta2">
+                    <div class="mini">
+                        <img src="static/images/image copy.png" alt="Fauna patagónica">
+                        <span>3:50</span>
                     </div>
 
-                    <div class="video-card hover-preview">
-                        <div class="thumb-wrapper">
-                            <img src="static/images/image copy.png" alt="Fauna patagónica">
-                            <span class="duration">3:50</span>
-                        </div>
+                    <div class="info">
                         <h4>Fauna patagónica</h4>
+                        <p>VideoStream</p>
                         <p>60 mil visualizaciones</p>
                     </div>
 
-                    <div class="video-card hover-preview">
-                        <div class="thumb-wrapper">
-                            <img src="static/images/image copy 3.png" alt="Consejos para viajar">
-                            <span class="duration">4:18</span>
-                        </div>
-                        <h4>Consejos para viajar</h4>
-                        <p>110 mil visualizaciones</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        
-        <aside class="sidebar">
-            
-            
-            <div class="sidebar-block">
-                <div class="sidebar-header">
-                    <h3>Siguiente en la cola</h3>
-                    <button class="btn-link">Limpiar cola</button>
+                    <button class="agregar">+</button>
                 </div>
 
-                <div class="side-video-list">
-                    <div class="side-video-card">
-                        <div class="thumb-wrapper side-thumb">
-                            <img src="static/images/image copy 7.png" alt="Explorando la Patagonia">
-                            <span class="duration">6:15</span>
-                        </div>
-                        <div class="side-video-info">
-                            <h4>Explorando la Patagonia</h4>
-                            <p>VideoStream</p>
-                            <p>120 mil visualizaciones</p>
-                        </div>
-                        <button class="btn-remove">×</button>
+                <div class="tarjeta2">
+                    <div class="mini">
+                        <img src="static/images/image copy 4.png" alt="Atardeceres increíbles">
+                        <span>4:18</span>
                     </div>
 
-                    <div class="side-video-card">
-                        <div class="thumb-wrapper side-thumb">
-                            <img src="static/images/image copy 6.png" alt="Comida callejera">
-                            <span class="duration">4:10</span>
-                        </div>
-                        <div class="side-video-info">
-                            <h4>Comida callejera</h4>
-                            <p>VideoStream</p>
-                            <p>98 mil visualizaciones</p>
-                        </div>
-                        <button class="btn-remove">×</button>
+                    <div class="info">
+                        <h4>Atardeceres increíbles</h4>
+                        <p>VideoStream</p>
+                        <p>72 mil visualizaciones</p>
                     </div>
 
-                    <div class="side-video-card">
-                        <div class="thumb-wrapper side-thumb">
-                            <img src="static/images/image copy 5.png" alt="Ciudades del mundo">
-                            <span class="duration">8:12</span>
-                        </div>
-                        <div class="side-video-info">
-                            <h4>Ciudades del mundo</h4>
-                            <p>VideoStream</p>
-                            <p>210 mil visualizaciones</p>
-                        </div>
-                        <button class="btn-remove">×</button>
-                    </div>
+                    <button class="agregar">+</button>
                 </div>
+
             </div>
 
-            
-            <div class="sidebar-block">
-                <div class="sidebar-header">
-                    <h3>Recomendados</h3>
-                </div>
+        </div>
 
-                <div class="side-video-list">
-                    <div class="side-video-card hover-preview">
-                        <div class="thumb-wrapper side-thumb">
-                            <img src="static/images/image copy 2.png" alt="Rutas de trekking">
-                            <span class="duration">5:20</span>
-                        </div>
-                        <div class="side-video-info">
-                            <h4>Rutas de trekking</h4>
-                            <p>VideoStream</p>
-                            <p>80 mil visualizaciones</p>
-                        </div>
-                        <button class="btn-add-queue" title="Añadir a la cola"><i data-lucide="plus-square"></i></button>
-                    </div>
+    </section>
 
-                    <div class="side-video-card hover-preview">
-                        <div class="thumb-wrapper side-thumb">
-                            <img src="static/images/image copy.png" alt="Fauna patagónica">
-                            <span class="duration">3:50</span>
-                        </div>
-                        <div class="side-video-info">
-                            <h4>Fauna patagónica</h4>
-                            <p>VideoStream</p>
-                            <p>60 mil visualizaciones</p>
-                        </div>
-                        <button class="btn-add-queue" title="Añadir a la cola"><i data-lucide="plus-square"></i></button>
-                    </div>
+</main>
 
-                    <div class="side-video-card hover-preview">
-                        <div class="thumb-wrapper side-thumb">
-                            <img src="static/images/image copy 4.png" alt="Atardeceres increíbles">
-                            <span class="duration">4:18</span>
-                        </div>
-                        <div class="side-video-info">
-                            <h4>Atardeceres increíbles</h4>
-                            <p>VideoStream</p>
-                            <p>72 mil visualizaciones</p>
-                        </div>
-                        <button class="btn-add-queue" title="Añadir a la cola"><i data-lucide="plus-square"></i></button>
-                    </div>
-                </div>
-            </div>
+<script src="static/js/script.js"></script>
 
-        </aside>
-    </main>
-
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
