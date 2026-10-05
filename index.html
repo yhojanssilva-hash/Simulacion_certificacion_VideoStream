@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ariel Faundez">
+    <title>Video Stream</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    
+    <header class="navbar">
+        <div class="imagen-youtube">
+            <img src="static/images/Youtube_logo.png" alt="VideoStream Logo">
+            <h1>Video<span class="rojo">Stream</span></h1>
+            <nav class="explorar">
+                <a href="#">Inicio</a>
+                <a href="#">Explorar</a>
+            </nav>
+        </div>
+
+    </header>
+
+    
+    <main class="main-layout">
+        
+        
+        <section class="video-section">
+            <div class="video-container">
+                <video controls poster="static/images/thumbnail-main.jpg">
+                    <source src="static/videos/lagos-y-montanas.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+            </div>
+
+            <div class="video-details">
+                <h2>Lagos y montañas</h2>
+                <p class="views-date">95 mil visualizaciones • 10 abr 2024</p>
+
+                <div class="video-actions">
+                    <div class="like-dislike-group">
+                        <button class="btn-action" id="btn-like">
+                            <span id="like-count">4,8 K</span>
+                        </button>
+                        <button class="btn-action" id="btn-dislike">
+                            <span>120</span>
+                        </button>
+                    </div>
+
+                    <button class="btn-action icon-only"><i data-lucide="more-horizontal"></i></button>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            
+            <div class="channel-info">
+                <div class="channel-header">
+                    <img src="static/images/channel-avatar.png" alt="VideoStream Avatar" class="avatar-lg">
+                    <div class="channel-text">
+                        <h3>VideoStream</h3>
+                        <p class="subscribers">1,2 M de suscriptores</p>
+                    </div>
+                    <button class="btn-subscribe" id="btn-subscribe">Suscribirse</button>
+                </div>
+                <div class="description">
+                    <p>Un recorrido por los lagos más hermosos de la Patagonia y sus alrededores. Descubre paisajes increíbles, rutas de trekking y consejos imperdibles.</p>
+                    <a href="#" class="show-more">Mostrar más</a>
+                </div>
+            </div>
+
+            
+            <section class="more-videos">
+                <h3>Más videos</h3>
+                <div class="grid-more-videos">
+                    <div class="video-card hover-preview">
+                        <div class="thumb-wrapper">
+                            <img src="static/images/image copy 2.png" alt="Rutas de trekking">
+                            <span class="duration">6:15</span>
+                        </div>
+                        <h4>Rutas de trekking</h4>
+                        <p>80 mil visualizaciones</p>
+                    </div>
+
+                    <div class="video-card hover-preview">
+                        <div class="thumb-wrapper">
+                            <img src="static/images/image.png" alt="Lagos y montañas">
+                            <span class="duration">4:32</span>
+                        </div>
+                        <h4>Lagos y montañas</h4>
+                        <p>95 mil visualizaciones</p>
+                    </div>
+
+                    <div class="video-card hover-preview">
+                        <div class="thumb-wrapper">
+                            <img src="static/images/image copy.png" alt="Fauna patagónica">
+                            <span class="duration">3:50</span>
+                        </div>
+                        <h4>Fauna patagónica</h4>
+                        <p>60 mil visualizaciones</p>
+                    </div>
+
+                    <div class="video-card hover-preview">
+                        <div class="thumb-wrapper">
+                            <img src="static/images/image copy 3.png" alt="Consejos para viajar">
+                            <span class="duration">4:18</span>
+                        </div>
+                        <h4>Consejos para viajar</h4>
+                        <p>110 mil visualizaciones</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        
+        <aside class="sidebar">
+            
+            
+            <div class="sidebar-block">
+                <div class="sidebar-header">
+                    <h3>Siguiente en la cola</h3>
+                    <button class="btn-link">Limpiar cola</button>
+                </div>
+
+                <div class="side-video-list">
+                    <div class="side-video-card">
+                        <div class="thumb-wrapper side-thumb">
+                            <img src="static/images/image copy 7.png" alt="Explorando la Patagonia">
+                            <span class="duration">6:15</span>
+                        </div>
+                        <div class="side-video-info">
+                            <h4>Explorando la Patagonia</h4>
+                            <p>VideoStream</p>
+                            <p>120 mil visualizaciones</p>
+                        </div>
+                        <button class="btn-remove">×</button>
+                    </div>
+
+                    <div class="side-video-card">
+                        <div class="thumb-wrapper side-thumb">
+                            <img src="static/images/image copy 6.png" alt="Comida callejera">
+                            <span class="duration">4:10</span>
+                        </div>
+                        <div class="side-video-info">
+                            <h4>Comida callejera</h4>
+                            <p>VideoStream</p>
+                            <p>98 mil visualizaciones</p>
+                        </div>
+                        <button class="btn-remove">×</button>
+                    </div>
+
+                    <div class="side-video-card">
+                        <div class="thumb-wrapper side-thumb">
+                            <img src="static/images/image copy 5.png" alt="Ciudades del mundo">
+                            <span class="duration">8:12</span>
+                        </div>
+                        <div class="side-video-info">
+                            <h4>Ciudades del mundo</h4>
+                            <p>VideoStream</p>
+                            <p>210 mil visualizaciones</p>
+                        </div>
+                        <button class="btn-remove">×</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="sidebar-block">
+                <div class="sidebar-header">
+                    <h3>Recomendados</h3>
+                </div>
+
+                <div class="side-video-list">
+                    <div class="side-video-card hover-preview">
+                        <div class="thumb-wrapper side-thumb">
+                            <img src="static/images/image copy 2.png" alt="Rutas de trekking">
+                            <span class="duration">5:20</span>
+                        </div>
+                        <div class="side-video-info">
+                            <h4>Rutas de trekking</h4>
+                            <p>VideoStream</p>
+                            <p>80 mil visualizaciones</p>
+                        </div>
+                        <button class="btn-add-queue" title="Añadir a la cola"><i data-lucide="plus-square"></i></button>
+                    </div>
+
+                    <div class="side-video-card hover-preview">
+                        <div class="thumb-wrapper side-thumb">
+                            <img src="static/images/image copy.png" alt="Fauna patagónica">
+                            <span class="duration">3:50</span>
+                        </div>
+                        <div class="side-video-info">
+                            <h4>Fauna patagónica</h4>
+                            <p>VideoStream</p>
+                            <p>60 mil visualizaciones</p>
+                        </div>
+                        <button class="btn-add-queue" title="Añadir a la cola"><i data-lucide="plus-square"></i></button>
+                    </div>
+
+                    <div class="side-video-card hover-preview">
+                        <div class="thumb-wrapper side-thumb">
+                            <img src="static/images/image copy 4.png" alt="Atardeceres increíbles">
+                            <span class="duration">4:18</span>
+                        </div>
+                        <div class="side-video-info">
+                            <h4>Atardeceres increíbles</h4>
+                            <p>VideoStream</p>
+                            <p>72 mil visualizaciones</p>
+                        </div>
+                        <button class="btn-add-queue" title="Añadir a la cola"><i data-lucide="plus-square"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
