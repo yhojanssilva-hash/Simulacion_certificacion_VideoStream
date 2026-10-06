@@ -9,57 +9,75 @@
 </head>
 <body>
 
-<header class="header">
-        <div class="container nav-container">
-            <div class="logo_youtube">
-                <img src="static/images/image copy 9.png" alt="logo">
-            </div>
-            <a href="#" class="logo">
-                Video<span>Stream</span>
-            </a>
-            <!-- COMENTARIO: Se añade la clase 'contenedor-navegacion' al nav para manejar Flexbox envolvente -->
-            <nav class="contenedor-navegacion">
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="#" class="nav-link active">Inicio</a></li>
-                    <li><a href="#" class="nav-link">Explorar</a></li>
-                    <li><a href="#" class="nav-link">Mi lista</a></li>
-                </ul>
-                <div class="buscador">
-                    <input type="text" id="buscarVideoa" placeholder="Buscar">
-                    <button id="btnBuscar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <div class="imagenes_perfil">
-                        <img src="static/images/image copy 10.png" alt="notificaciones">
-                        <img src="static/images/image copy 11.png" alt="foto de perfil">
-                    </div>
-                </div>
-            </nav>
+<header class="barra">
+    <div class="logo-seccion">
+        <div class="logo">
+            <img src="static/images/image copy 9.png" alt="Logo YouTube" class="icono-logo">
+            <h1>Video<span>Stream</span></h1>
         </div>
-    </header>
+
+        <nav class="nav">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Explorar</a>
+            <a href="#">Mi lista</a>
+        </nav>
+    </div>
+
+    <div class="derecha-header">
+        <div class="buscador">
+            <input type="text" placeholder="Buscar">
+            <button class="btn-buscar">
+                <img src="static/images/image copy 16.png" alt="Buscar" class="icono-btn">
+            </button>
+        </div>
+
+        <button class="btn-icono" title="Notificaciones">
+            <img src="static/images/image copy 15.png" alt="Notificaciones" class="icono-btn">
+        </button>
+
+        <div class="usuario-icono">
+            <img src="static/images/image copy 14.png" alt="Usuario" class="icono-btn">
+        </div>
+    </div>
+</header>
+
 <main>
 
     <section class="video">
 
         <div class="reproductor">
+            <iframe src="https://www.youtube.com/embed/XaGceCRnRBg?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=XaGceCRnRBg" title="Lagos y montañas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="reproductorYoutube"></iframe>
         </div>
 
         <div class="datos">
             <h2>Lagos y montañas</h2>
-            <p class="vistas">95 mil visualizaciones • 10 abr 2024</p>
 
-            <div class="acciones">
-                <div class="megusta">
-                    <button class="boton" id="like">
-                    <span id="likes">4,8 K</span>
+            <div class="sub-datos">
+                <p class="vistas">95 mil visualizaciones • 10 abr 2024</p>
+
+                <div class="acciones">
+                    <button class="boton-transparente" id="like">
+                        <img src="static/images/image copy 13.png" alt="Like" class="icono-btn">
+                        <span id="likes">4,8 K</span>
                     </button>
 
-                    <button class="boton" id="dislike">
-                    <span>120</span>
+                    <button class="boton-transparente" id="dislike">
+                        <img src="static/images/image copy 12.png" alt="Dislike" class="icono-btn">
+                        <span>120</span>
                     </button>
+
+                    <button class="boton-transparente">
+                        <img src="static/images/image copy 16.png" alt="Compartir" class="icono-btn">
+                        <span>Compartir</span>
+                    </button>
+
+                    <button class="boton-transparente">
+                        <span class="icono-cola">⊞</span>
+                        <span>Añadir a la cola</span>
+                    </button>
+
+                    <button class="boton-transparente">•••</button>
                 </div>
-
-                <button class="boton">•••</button>
             </div>
         </div>
 
@@ -68,11 +86,13 @@
         <div class="canal">
 
             <div class="encabezado">
-                <img src="static/images/channel-avatar.png" alt="VideoStream" class="avatar">
+                <div class="avatar-placeholder">
+                    <img src="static/images/image copy 14.png" alt="Canal" class="icono-btn">
+                </div>
 
                 <div>
                     <h3>VideoStream</h3>
-                    <p class="suscriptores">1,2 M de suscriptores</p>
+                    <p class="suscriptores" id="contadorSuscriptores">1,2 M de suscriptores</p>
                 </div>
 
                 <button class="suscribir" id="suscribir">
@@ -83,10 +103,10 @@
             <div class="descripcion">
                 <p>
                     Un recorrido por los lagos más hermosos de la Patagonia y sus alrededores.
-                    Descubre paisajes increíbles, rutas de trekking y consejos imperdibles.
+                    Consejos, rutas y paisajes imperdibles.
                 </p>
 
-                <a href="#">Mostrar más</a>
+                <a href="#">Mostrar más ▾</a>
             </div>
 
         </div>
@@ -177,21 +197,6 @@
                         <h4>Comida callejera</h4>
                         <p>VideoStream</p>
                         <p>98 mil visualizaciones</p>
-                    </div>
-
-                    <button class="eliminar">×</button>
-                </div>
-
-                <div class="tarjeta2">
-                    <div class="mini">
-                        <img src="static/images/image copy 5.png" alt="Ciudades del mundo">
-                        <span>8:12</span>
-                    </div>
-
-                    <div class="info">
-                        <h4>Ciudades del mundo</h4>
-                        <p>VideoStream</p>
-                        <p>210 mil visualizaciones</p>
                     </div>
 
                     <button class="eliminar">×</button>
